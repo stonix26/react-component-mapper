@@ -1,10 +1,10 @@
 import React from 'react'
 
-export type TTextArea = React.TextareaHTMLAttributes<HTMLTextAreaElement>
+export type TTextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>
 
 const TextArea = React.forwardRef<
   HTMLTextAreaElement,
-  React.PropsWithoutRef<TTextArea>
+  React.PropsWithoutRef<TTextAreaProps>
 >(({ cols = 30, rows = 10, className, ...props }, ref) => {
   return (
     <textarea

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export interface ComponentMapperProps<T> {
+interface ComponentMapperProps<T> {
   components: { [key: string]: React.FC }
   componentName: string
   componentProps: T

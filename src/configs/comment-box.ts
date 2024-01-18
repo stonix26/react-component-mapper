@@ -1,9 +1,11 @@
-import { TButton } from '../components/Button'
-import { TInput } from '../components/Input'
-import { TTextArea } from '../components/TextArea'
+import { TButtonProps } from '../components/Button'
+import { TInputProps } from '../components/Input'
+import { TTextAreaProps } from '../components/TextArea'
 import { IContainerConfig } from './container_types'
 
-export const config: IContainerConfig<TInput | TTextArea | TButton> = {
+export const config: IContainerConfig<
+  TInputProps | TTextAreaProps | TButtonProps
+> = {
   container_name: 'CommentBox Container',
   components: [
     {

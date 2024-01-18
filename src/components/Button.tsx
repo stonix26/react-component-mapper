@@ -1,10 +1,10 @@
 import React from 'react'
 
-export type TButton = React.ButtonHTMLAttributes<HTMLButtonElement>
+export type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const Button = React.forwardRef<
   HTMLButtonElement,
-  React.PropsWithoutRef<TButton>
+  React.PropsWithoutRef<TButtonProps>
 >(({ className, ...props }, ref) => {
   return (
     <button
