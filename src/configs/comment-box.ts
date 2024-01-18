@@ -1,11 +1,9 @@
 import { TButton } from '../components/Button'
 import { TInput } from '../components/Input'
 import { TTextArea } from '../components/TextArea'
-import { IContainerConfig, IContainerComponent } from './container_types'
+import { IContainerConfig } from './container_types'
 
-export const config: IContainerConfig<
-  IContainerComponent<TInput | TTextArea | TButton>
-> = {
+export const config: IContainerConfig<TInput | TTextArea | TButton> = {
   container_name: 'CommentBox Container',
   components: [
     {
@@ -13,7 +11,7 @@ export const config: IContainerConfig<
       props: {
         placeholder: 'Name',
         type: 'text',
-        onChange: e => console.log('Input email event', e)
+        onChange: e => console.log('Input username event', e)
       }
     },
     {

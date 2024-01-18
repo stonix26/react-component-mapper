@@ -1,8 +1,8 @@
 import { TButton } from '../components/Button'
 import { TInput } from '../components/Input'
-import { IContainerConfig, IContainerComponent } from './container_types'
+import { IContainerConfig } from './container_types'
 
-export const config: IContainerConfig<IContainerComponent<TInput | TButton>> = {
+export const config: IContainerConfig<TInput | TButton> = {
   container_name: 'Login Container',
   components: [
     {
