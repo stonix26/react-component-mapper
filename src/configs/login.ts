@@ -1,17 +1,8 @@
 import { TButton } from '../components/Button'
 import { TInput } from '../components/Input'
+import { IContainerConfig, IContainerComponent } from './container_types'
 
-export interface IComponent {
-  name: string
-  props: TInput | TButton
-}
-
-export interface ILoginContainer {
-  container_name: string
-  components: IComponent[]
-}
-
-export const config: ILoginContainer = {
+export const config: IContainerConfig<IContainerComponent<TInput | TButton>> = {
   container_name: 'Login Container',
   components: [
     {
@@ -33,8 +24,15 @@ export const config: ILoginContainer = {
     {
       name: 'Button',
       props: {
-        onClick: () => alert('Button Clicked'),
+        onClick: () => alert('Login Clicked'),
         children: 'Login'
+      }
+    },
+    {
+      name: 'Button',
+      props: {
+        onClick: () => alert('Register Clicked'),
+        children: 'Register'
       }
     }
   ]
