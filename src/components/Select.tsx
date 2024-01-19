@@ -16,7 +16,7 @@ export type TSelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
 }
 
 const Select: FC<TSelectProps & RefAttributes<HTMLSelectElement>> = forwardRef(
-  ({ id, label, options, ...props }, ref) => {
+  function SelectPrimitive({ id, label, options, ...props }, ref) {
     const default_id = useId()
     return (
       <div className='flex flex-col'>

@@ -3,7 +3,10 @@ import { FC, RefAttributes, TextareaHTMLAttributes, forwardRef } from 'react'
 export type TTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>
 
 const TextArea: FC<TTextAreaProps & RefAttributes<HTMLTextAreaElement>> =
-  forwardRef(({ cols = 30, rows = 10, className, ...props }, ref) => {
+  forwardRef(function TextAreaPrimitive(
+    { cols = 30, rows = 10, className, ...props },
+    ref
+  ) {
     return (
       <textarea
         ref={ref}

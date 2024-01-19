@@ -3,7 +3,7 @@ import { FC, InputHTMLAttributes, RefAttributes, forwardRef } from 'react'
 export type TInputProps = InputHTMLAttributes<HTMLInputElement>
 
 const Input: FC<TInputProps & RefAttributes<HTMLInputElement>> = forwardRef(
-  ({ className, type = 'text', ...props }, ref) => {
+  function InputPrimitive({ className, type = 'text', ...props }, ref) {
     return (
       <input
         ref={ref}

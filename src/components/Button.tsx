@@ -3,7 +3,7 @@ import { FC, RefAttributes, forwardRef } from 'react'
 export type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const Button: FC<TButtonProps & RefAttributes<HTMLButtonElement>> = forwardRef(
-  ({ className, ...props }, ref) => {
+  function ButtonPrimitive({ className, ...props }, ref) {
     return (
       <button
         ref={ref}
