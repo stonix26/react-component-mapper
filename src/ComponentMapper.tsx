@@ -1,7 +1,9 @@
-import React from 'react'
+import { FC, RefAttributes } from 'react'
 
-interface ComponentMapperProps<T> {
-  components: { [key: string]: React.FC }
+interface ComponentMapperProps<T extends object> {
+  components: {
+    [key: string]: FC<T & RefAttributes<HTMLElement>>
+  }
   componentName: string
   componentProps: T
 }

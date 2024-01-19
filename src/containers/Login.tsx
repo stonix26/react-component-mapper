@@ -11,7 +11,8 @@ const Login: React.FC<typeof login_config> = props => {
       {config_components.map((c, i) => (
         <ComponentMapper
           key={i}
-          components={COMPONENTS}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          components={COMPONENTS as Record<string, React.FC<any>>}
           componentName={c.name}
           componentProps={c.props}
         />

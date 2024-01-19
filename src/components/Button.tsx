@@ -1,18 +1,17 @@
-import React from 'react'
+import { FC, RefAttributes, forwardRef } from 'react'
 
 export type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button = React.forwardRef<
-  HTMLButtonElement,
-  React.PropsWithoutRef<TButtonProps>
->(({ className, ...props }, ref) => {
-  return (
-    <button
-      ref={ref}
-      className={`bg-slate-200 px-2 rounded ${className}`}
-      {...props}
-    />
-  )
-})
+const Button: FC<TButtonProps & RefAttributes<HTMLButtonElement>> = forwardRef(
+  ({ className, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        className={`bg-slate-200 px-2 rounded ${className}`}
+        {...props}
+      />
+    )
+  }
+)
 
 export default Button
