@@ -8,30 +8,30 @@ export const config: IContainerConfig<TInputProps | TButtonProps> = {
     {
       name: 'Input',
       props: {
+        name: 'email',
         placeholder: 'Email',
-        type: 'email',
-        onChange: e => console.log('Input email event', e)
+        type: 'email'
       }
     },
     {
       name: 'Input',
       props: {
+        name: 'password',
         placeholder: 'Password',
-        type: 'password',
-        onChange: e => console.log('Input password event', e)
+        type: 'password'
       }
     },
     {
       name: 'Button',
       props: {
-        onClick: () => alert('Login Clicked'),
+        name: 'login',
         children: 'Login'
       }
     },
     {
       name: 'Button',
       props: {
-        onClick: () => alert('Register Clicked'),
+        name: 'register',
         children: 'Register'
       }
     }

@@ -1,16 +1,16 @@
 import { useMemo, useState } from 'react'
 import { Select } from './components'
 import { config as comment_box_config } from './configs/comment-box'
-import { config as login_config } from './configs/login'
 import CommentBox from './containers/CommentBox'
-import Login from './containers/Login'
+import Login from './containers/login'
+import login_json from './configs/login.json'
 
 const template_list = [
   {
     id: '1',
     label: 'Login Template',
     value: 'login',
-    template_component: <Login {...login_config} />
+    template_component: <Login {...login_json} />
   },
   {
     id: '2',
